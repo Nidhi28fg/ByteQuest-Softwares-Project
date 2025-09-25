@@ -19,21 +19,27 @@ const images = [
   { image: bag7, name: "Slings Bags" },
   { image: bag8, name: "Handbags Bags" },
   { image: bag9, name: "Buck Bags" },
- 
 ];
 
 export default function Banner() {
-  return (<div>
-    <div className="overflow-auto whitespace-nowrap lg:pl-2 [&::-webkit-scrollbar]:hidden lg:py-8 mt-25">
-      {images.map((img, key) => (
-        <div key={key} className="inline-block p-6 ">
-          {" "}
-          <Image src={img.image} width={100} height={100} className="w-10 h-10 lg:w-25 lg:h-25 " alt={img.name} />
-          <div className="text-center text-[8px] lg:text-[12px] pt-2">{img.name}</div>
-        </div>
-      ))}
-    </div>
-  
+  return (
+    <div>
+      <div className="overflow-auto whitespace-nowrap lg:pl-2 [&::-webkit-scrollbar]:hidden lg:py-8 mt-25">
+        {images.map((img, key) => (
+          <div key={key} className="inline-block p-6 ">
+            <Image
+              src={img.image}
+              width={100}
+              height={100}
+              className="w-10 h-10 lg:w-25 lg:h-25 "
+              alt={img.name}
+            />
+            <div className="text-center text-[8px] lg:text-[12px] pt-2">
+              {img.name}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
