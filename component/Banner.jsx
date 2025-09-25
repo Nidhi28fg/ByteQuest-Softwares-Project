@@ -9,12 +9,31 @@ import bag7 from "@/public/bag7.png";
 import bag8 from "@/public/bag8.png";
 import bag9 from "@/public/bag9.png";
 
-
-
-
+const images = [
+  { image: bag, name: "All Bags" },
+  { image: bag2, name: "Vanity Pouch" },
+  { image: bag3, name: "Tote Bag" },
+  { image: bag4, name: "Duffle Bag" },
+  { image: bag5, name: "Laptop Sleeve" },
+  { image: bag6, name: "Messenger Bags" },
+  { image: bag7, name: "Slings Bags" },
+  { image: bag8, name: "Handbags Bags" },
+  { image: bag9, name: "Buck Bags" },
+ 
+];
 
 export default function Banner() {
-  return <div>
-    {/* <Image src={bag} width={100} height={100} /> */}
-  </div>;
+  return (<div>
+    <div className="overflow-auto whitespace-nowrap md:pl-2 [&::-webkit-scrollbar]:hidden md:py-8">
+      {images.map((img, key) => (
+        <div key={key} className="inline-block p-6 ">
+          {" "}
+          <Image src={img.image} width={100} height={100} className="w-10 h-10 md:w-25 md:h-25 " alt={img.name} />
+          <div className="text-center text-[8px] md:text-[12px] pt-2">{img.name}</div>
+        </div>
+      ))}
+    </div>
+  
+    </div>
+  );
 }
