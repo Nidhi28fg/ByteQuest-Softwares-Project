@@ -24,13 +24,13 @@ export default function Product() {
   }, []);
 
   return (
-    <div className="md:px-8 text-white">
-      <div className="flex justify-between items-center px-2 md:px-0 text-[10px] md:text-[16px]">
+    <div className="lg:px-8 text-white">
+      <div className="flex justify-between items-center px-2 lg:px-0 text-[10px] lg:text-[16px]">
         <div className="flex gap-1 ">
           Bags <PiDotOutlineFill /> Backpacks
         </div>
         <div className="flex gap-2 items-center">
-          13 products <PiExportBold className="md:text-2xl text-[18px]" />
+          13 products <PiExportBold className="lg:text-2xl text-[18px]" />
         </div>
       </div>
       {loading ? (
@@ -40,10 +40,10 @@ export default function Product() {
         </div>
       ) : (
             // grid center m 
-        <div className="grid grid-cols-2 place-items-center md:grid-cols-4 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 place-items-center xl:grid-cols-4 lg:gap-4">
           {products.map((item, key) => (
             <div
-              className="rounded-2xl mt-12 w-[150px] h-[350px] md:w-[280.15px] md:h-[483.43px]"
+              className="rounded-2xl mt-12 w-[150px] h-[350px] lg:w-[280.15px] lg:h-[483.43px]"
               key={key}
             >
               <div className="relative h-[80%] bg-white flex items-center w-full rounded-t-2xl">
@@ -52,13 +52,13 @@ export default function Product() {
                   width={200}
                   height={200}
                   alt={item.title}
-                  className="md:w-full h-[180px] md:h-[300px] p-1 md:p-3 "
+                  className="lg:w-full h-[180px] lg:h-[300px] p-1 lg:p-3 "
                 />{" "}
-                <BsBookmark className="text-black absolute top-4 right-4 md:text-4xl" />
+                <BsBookmark className="text-black absolute top-4 right-4 lg:text-4xl" />
               </div>
               <div className="h-[20%] px-2 py-3 flex flex-col">
                 <div className="">
-                  <p className="md:text-[20px] text-[12px] leading-tight md:h-12">
+                  <p className="lg:text-[20px] text-[12px] leading-tight lg:h-12">
                     {item.title.length > 30
                       ? item.title.substring(0, 30) + "..."
                       : item.title}
@@ -67,18 +67,18 @@ export default function Product() {
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="flex gap-1">
-                    <div className="font-bold text-[10px] md:text-[18px]">
+                    <div className="font-bold text-[10px] lg:text-[18px]">
                       ₹ {item.price}{" "}
-                      <span className="md:text-[11px] text-[8px] font-light">
+                      <span className="lg:text-[11px] text-[8px] font-light">
                         {item.rating.count}
                       </span>{" "}
-                      <span className="text-green-400 md:text-[12px] text-[9px] font-semibold">
+                      <span className="text-green-400 lg:text-[12px] text-[9px] font-semibold">
                         ({item.rating.rate})
                       </span>
                     </div>{" "}
                   </div>
                   <div>
-                    <TbShoppingBagPlus className="md:text-4xl" />
+                    <TbShoppingBagPlus className="lg:text-4xl" />
                   </div>
                 </div>
               </div>

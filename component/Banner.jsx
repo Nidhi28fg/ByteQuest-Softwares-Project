@@ -24,12 +24,12 @@ const images = [
 
 export default function Banner() {
   return (<div>
-    <div className="overflow-auto whitespace-nowrap md:pl-2 [&::-webkit-scrollbar]:hidden md:py-8">
+    <div className="overflow-auto whitespace-nowrap lg:pl-2 [&::-webkit-scrollbar]:hidden lg:py-8 mt-25">
       {images.map((img, key) => (
         <div key={key} className="inline-block p-6 ">
           {" "}
-          <Image src={img.image} width={100} height={100} className="w-10 h-10 md:w-25 md:h-25 " alt={img.name} />
-          <div className="text-center text-[8px] md:text-[12px] pt-2">{img.name}</div>
+          <Image src={img.image} width={100} height={100} className="w-10 h-10 lg:w-25 lg:h-25 " alt={img.name} />
+          <div className="text-center text-[8px] lg:text-[12px] pt-2">{img.name}</div>
         </div>
       ))}
     </div>
