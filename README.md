@@ -9,8 +9,9 @@ A modern, responsive e-commerce UI for bags and accessories built with Next.js a
 - Custom Navbar and Banner components
 - Responsive menu: desktop menu hidden on mobile, hamburger menu shown on mobile
 - Modern design with Tailwind CSS
-- Iconography via [react-icons](https://react-icons.github.io/react-icons/)
+- react-icons
 - Loading indicators for async data
+- Netlity Live Link - https://candid-vacherin-0d8deepak.netlify.app/
 
 ## Getting Started
 
