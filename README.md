@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TANN TRIM – Next.js E-commerce UI
+
+A modern, responsive e-commerce UI for bags and accessories built with Next.js and Tailwind CSS.
+
+## Features
+
+- Responsive e-commerce UI for bags and accessories
+- Product grid with live data from [Fake Store API](https://fakestoreapi.com/products )
+- Custom Navbar and Banner components
+- Responsive menu: desktop menu hidden on mobile, hamburger menu shown on mobile
+- Modern design with Tailwind CSS
+- Iconography via [react-icons](https://react-icons.github.io/react-icons/)
+- Loading indicators for async data
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+app/
+  layout.js      # Root layout with global styles and fonts
+  page.js        # Main page, renders Navbar, Banner, Product
+component/
+  Banner.jsx     # Banner with bag categories
+  Navbar.jsx     # Responsive navigation bar
+  Product.jsx    # Product grid with REST API integration
+public/          # Static assets (bag images, favicon, etc.)
+styles/          # Global styles (globals.css)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Products:** Data is fetched from Fake Store API using REST API. 
+2. **Images:** Bag images are stored in `public/`. Update or add images as needed.
+3. **Styling:** Tailwind CSS is used for styling. Modify `globals.css` or component classes for custom styles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Dependencies
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js
+- React
+- Tailwind CSS
+- react-icons
+- axios
+- react-loading-indicators

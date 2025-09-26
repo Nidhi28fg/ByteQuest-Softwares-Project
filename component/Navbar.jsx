@@ -27,17 +27,36 @@ export default function Navbar() {
             <HiOutlineShoppingBag className="text-2xl" />
           </div>
         </div>
-        <div className="xl:hidden" onClick={() => setIsOpenMobileNav(!isOpenMobileNav)}>
+        <div
+          className="xl:hidden"
+          onClick={() => setIsOpenMobileNav(!isOpenMobileNav)}
+        >
           <IoReorderThree className="text-3xl" />
         </div>
       </div>
 
       {isOpenMobileNav && (
-        <div className="bg-black w-[50%] h-screen text-white text-center z-50 absolute top-0 right-0 p-10">
-          <div className="flex justify-end" onClick={() => setIsOpenMobileNav(!isOpenMobileNav)}>
+        <div className="bg-gray-900 w-[40%] h-screen text-white text-center z-50 absolute top-0 right-0 p-10">
+          <div
+            className="absolute top-4 right-4 cursor-pointer"
+            onClick={() => setIsOpenMobileNav(!isOpenMobileNav)}
+          >
             <IoClose className="text-2xl" />
           </div>
-          
+          <div className="flex flex-col items-center gap-8 mt-10">
+            <div>
+              <IoIosSearch className="text-2xl" />
+            </div>
+            <div>
+              <BsPerson className="text-2xl" />
+            </div>
+            <div>
+              <IoBookmarkOutline className="text-xl" />
+            </div>
+            <div>
+              <HiOutlineShoppingBag className="text-2xl" />
+            </div>
+          </div>
         </div>
       )}
 
